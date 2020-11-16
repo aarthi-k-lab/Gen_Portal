@@ -86,7 +86,7 @@ ol,ul{
 }
 
 #file-manager .directory.open {
-    background-image: url(FileManager_size.png);
+    background-image: url(/images/FileManager_size.png);
     
 }
 
@@ -136,5 +136,5 @@ button:hover {
 }
 
 td input{
-    width:68px;
+    width: 150px;
 }
