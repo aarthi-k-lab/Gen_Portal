@@ -1,6 +1,5 @@
 #page-body{
     height: 570px;
-    /* background-color:  #35302D; */
 }
 #page-intro {
     height: 100px;
@@ -57,7 +56,6 @@ div.sidebar
     height: 100%;
     background-color: white;
     border: solid 4px gray;
-    /* background-image: linear-gradient(to bottom,rgb(223, 74, 20),rgb(233, 136, 101)); */
 }
 
 #file-manager {
@@ -65,7 +63,6 @@ div.sidebar
     height: 530px;
     float: left;
     margin: 15px;
-    /* border: solid black; */
 }
 
 #file-manager ul {
@@ -103,7 +100,7 @@ ol,ul{
 }
 
 .mainbar{
-    hi
+    display:none;
     padding: 10px;
     float: right;
     width: 900px;
@@ -130,17 +127,11 @@ button{
     font-size: 13px;
     cursor: pointer;
 }
-button:hover {
+a:hover,button:hover {
   background-color: #008CBA;
   color: white;
 }
 
 td input{
     width: 68px;
-}
-
-
-a:hover{
-    background-color: #008CBA;
-    color: white;
 }

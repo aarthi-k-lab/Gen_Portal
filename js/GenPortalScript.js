@@ -7,7 +7,7 @@ function addRow(){
     var tr = stepTab.insertRow(rowCnt);
     tr.setAttribute("id",stepid);
     tr.setAttribute("name",stepid);
-    var id=["step","description","prompt","reply_with","reply_type",rowCnt];
+    var id=["step","description","prompt","reply_with","reply_type","delete"+rowCnt];
     var ele;
     for(var c=0; c<colCnt; c++){
         var td = document.createElement('td');
@@ -58,16 +58,24 @@ function addRow(){
 function deleteCrntRow(id)
 {
     let tableBase=document.getElementById("test_steps");
-    console.log(id);
-    tableBase.deleteRow(id);
-    tableBase=document.getElementById("test_steps");
+    let rowToBeDeleted=id.id.substring(6);
+    tableBase.deleteRow(rowToBeDeleted);
     let steps=document.getElementsByClassName("step");
-    console.log(steps.length);
-    for(let i=tableBase.rows.length-1;i>0;i--)
+    let buttons=document.querySelectorAll("td button");
+    for(let i=0;i<steps.length;i++)
     {
-        console.log(i,steps[i-1]);
-        steps[i-1].setAttribute("placeholder",i);
-        steps[i-1].setAttribute("id",i);
+        steps[i].setAttribute("placeholder",i+1);
+        buttons[i].setAttribute("id","delete"+(i+1));
+        buttons[i].setAttribute("name","delete"+(i+1));
+        buttons[i].setAttribute("class","delete"+(i+1));
+        buttons[i].setAttribute("onclick","deleteCrntRow(delete"+(i+1)+")");
     }
 
 }
+
+$(function() {
+    $('#create_testcase').click(function() {
+        $('#sb-right').show();
+        return false;
+    });        
+});
