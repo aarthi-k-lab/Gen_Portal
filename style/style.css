@@ -1,45 +1,77 @@
 body {
-    font-family: "Lato", sans-serif;
-  }
-  
-  .sidenav {
-    height: 100%;
-    width: 200px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #35302D;
-    padding-top: 30px;
-  }
-  
-  .sidenav h1{
-      color: orangered;
-      text-align: center;
-  }
-  
-  .sidenav a {
-    padding: 10px;
-    text-decoration: none;
-    text-align: center;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    font-size: 18px;
-  }
-  
-  .sidenav a:hover {
-    color: #DF4500;
-    background-color: black;
-  }
-  
-  .main {
-    margin-left: 200px; /* Same as the width of the sidenav */
-    font-size: 28px; /* Increased text to enable scrolling */
-    padding: 0px 10px;
-  }
+  font-family: "Lato", sans-serif;
+}
 
-  .sidenav a:active{
-    color: #DF4500;
-    background-color: black;
-  }
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #35302D;
+  padding-top: 30px;
+}
+
+.sidenav .nav a.active {
+  background-color: black;
+  color: orangered;
+}
+
+.sidenav h1{
+    color: orangered;
+    text-align: center;
+}
+
+.sidenav a {
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 25px;
+  color: #dbdada;
+  display: block;
+  font-size: 18px;
+}
+
+.sidenav a:hover {
+  color: #DF4500;
+  background-color: black;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+
+}
+
+.header {
+  text-align: center;
+font-size: 28px;
+  color: #2d2929ed;
+  height: 100px;
+  background-image: linear-gradient(to bottom,orangered,rgb(233, 136, 101));
+  background-repeat: repeat-x;
+  position: relative;
+}
+.header h2{
+padding: 20px;
+margin-block-start: 0;
+}
+.env_creation{
+margin-left: 50px;
+font-size: 14px;
+padding-top: 30px;
+}
+
+.env_creation table{
+border: none;
+table-layout: fixed;
+width: 600px;
+}
+.env_creation table td{
+padding-top: 8px;
+}
+.env_creation td input{
+width: 200px;
+}
+

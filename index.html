@@ -10,13 +10,56 @@
     <div class="sidenav">
         <img src="images/icon-genesys.png" />
         <h1>Centralized QAART</h1>
-        <a href="index.html">Create Environment</a>
-        <a href="html/GenesysPortal.html">Genesys Portal</a>
-        <a href="html/RoutingUseCases.html">Test Routing</a>
-      </div>
+        <div class="nav nav-sidebar">
+            <a href="index.html" class="active">Create Environment</a>
+            <a href="html/GenesysPortal.html">Genesys Portal</a>
+            <a href="html/RoutingUseCases.html">Test Routing</a>
+        </div>
+    </div>
       
-      <div class="main">
-          
-      </div>
+    <div class="main">
+        <div class="header">
+            <h2>Environment Creation</h2>
+        </div>
+        <div class="env_creation">
+            <form id="create_env" action="">
+                <table>
+                    <tr><td><label for="testAgents">No. of Test Agents to be used</label></td>
+                    <td>: <input type="text" id="testAgents"></td>
+                    <tr><td><label for="existEnv">No. of Existing Environment</label></td>
+                    <td>: <input type="text" id="existEnv"></td></tr>
+                    <tr><td><label for="qaartEnv">No. of QAART Environment</label></td>
+                    <td>: <input type="text" id="qaartEnv"></td></tr>
+                    <tr><td><label for="qaartEnv_Host">No. of QAART Environment per host</label></td>
+                    <td>: <input type="text" id="qaartEnv_Host"></td></tr>
+                    <tr><td><label for="tenantReg">Tenant Region</label></td>
+                    <td>: <input type="text" id="tenantReg"></td></tr>
+                    <tr><td><label for="tsrvContact">T server Contact</label></td>
+                    <td>: <input type="text" id="tsrvContact"></td></tr>
+                    <tr><td><label for="tsrvPort">T server Port</label></td>
+                    <td>: <input type="text" id="tsrvPort"></td></tr>
+                    <tr><td><label for="obj_Env">No. of Objects per Environment</label></td>
+                    <td>: <input type="text" id="obj_Env"></td></tr>
+                </table><br>
+                <hr>
+                <h4>Init File</h4>
+                <table>
+                    <tr><td><label for="CSHost">CS Host</label></td>
+                    <td>: <input type="text" id="CSHost"></td></tr>
+                    <tr><td><label for="CSPort">CS Port</label></td>
+                    <td>: <input type="text" id="CSPort"></td></tr>
+                    <tr><td><label for="CSApplication">CS Application</label></td>
+                    <td>: <input type="text" id="CSApplication"></td></tr>
+                    <tr><td><label for="CSPassword">CS Password</label></td>
+                    <td>: <input type="text" id="CSPassword"></td></tr>
+                    <tr><td><label for="CSUsername">CS Username</label></td>
+                    <td>: <input type="text" id="CSUsername"></td></tr>
+                    <tr><td><label for="configsrv">Config Server Name</label></td>
+                    <td>: <input type="text" id="configsrv"></td></tr>
+                </table><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
 </body>
 </html>

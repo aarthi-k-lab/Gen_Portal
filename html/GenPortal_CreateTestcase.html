@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/GenPortalStyle.css">
+
+    <title>Centralized QAART</title>
+</head>
+<body>
+    <div class="sidenav">
+        <img src="/images/icon-genesys.png" />
+        <h1>Centralized QAART</h1>
+    
+        <div class="nav nav-sidebar">
+        <a href="/index.html">Create Environment</a>
+        <a href="GenesysPortal.html" class="active">Genesys Portal</a>
+        <a href="/html//RoutingUseCases.html">Test Routing</a>
+        </div>
+        
+      </div>
+      
+    <div class="main">
+
+        <div id="page-intro" class="with-nav-bar">   
+            <div class="container">
+                <div class="crumbs">                    
+                </div>
+                <div>
+                    <div class="pull-right">
+                        <a class="btn model-disable" hint="Cannot create test suite within the Models area" href="" id="create_testsuite">New Test Suite</a>
+                        <a class="btn model-disable" hint="Cannot create test cases within the Models area" href="" id="create_testcase">New Test Case</a>
+                    </div>
+                    <h2 class="title">Test Cases &amp; Blocks</h2>  
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="page-body">
+            <div class="sidebar" id="sb-left" style="display: inline-block;">
+                <div id="file-manager">
+                   <ul>
+                       <li>
+                        <a id="project-root" data-type="root" class="directory open" data-path="/">TestSuite</a>
+                        <ul style="overflow: hidden;"></ul>
+                       </li>
+                   </ul> 
+                </div>
+            </div>
+            <div class="mainbar" id="sb-right">
+                <div class="section">
+                    <h4>Create new testcase</h4>
+                    <form id="testcase" action="" method="POST">
+                        <label for="name">Name : </label>
+                        <input type="text" id="test_case_name" name="test_case_name"><br><br>
+                        <label for="path">Path : </label>
+                        <input type="text" id="path">
+                        <button type="button" onclick=""> Browse </button><br><br>
+                        <label for="DIDnum">DID Number : </label>
+                        <input type="text" id="did_no" name="did_no"><br><br>
+                        <label for="notes">Notes : </label>
+                        <textarea id="notes" rows="2" style="margin: 0px; width: 371px; height: 53px;"></textarea>
+                    
+                    <hr>
+                    <h4>Steps</h4>
+                    <button type="button" onclick="addRow()"> New step </button><br><br>
+                    <table id="test_steps" name="test_steps">
+                        <tr>
+                            <th>Step</th>
+                            <th>Description</th>
+                            <th>Expected Text</th>
+                            <th>Reply With</th>
+                            <th>Reply Type</th>
+                            <th>Actions</th>
+                        </tr>
+                    </table><br><br>
+                    <hr><br>
+                    <button type="button" onclick=""> Save and Run</button>
+                    <button type="button" onclick=""> Save and Exit</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/GenPortalScript.js"/>    
+</body>
+</html>
