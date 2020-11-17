@@ -97,7 +97,7 @@ $(function() {
 // }
 function d(){
 modal.style.display = "block";
-var data=[{"expected text": "hello welcome to genesys", "transcribed text ": "hello welcome to genesis", "confidence": 0.9476495726495727, "status": "passed"},{"expected text": "Thanks for your input ", "transcribed text ": "thanks for your input", "confidence": 0.9285714285714285, "status": "passed"},{"expected text": "we will get back", "transcribed text ": "we will get back", "confidence": 0.9629629629629629, "status": "passed"}];  
+var data=[{"expected text": "'hello welcome to genesys'", "transcribed text ": "hello welcome to genesis", "confidence": 0.9476495726495727, "status": "passed"},{"expected text": "Thanks for your input ", "transcribed text ": "thanks for your input", "confidence": 0.9285714285714285, "status": "passed"},{"expected text": "we will get back", "transcribed text ": "we will get back", "confidence": 0.9629629629629629, "status": "passed"}];  
 var parsedData=JSON.parse(JSON.stringify(data));
 var headings=["Expected Text", "Transcribed Text", "Confidence", "Status"];
 console.log(parsedData);
@@ -110,6 +110,7 @@ for(let i=0;i<headings.length;i++)
     tr.appendChild(th);    
 }
 table.appendChild(tr);
+let passCnt=0;
 for(let i of parsedData)
 {
     tr=document.createElement("tr");
@@ -126,7 +127,20 @@ for(let i of parsedData)
     td4.innerText=i["status"];
     tr.appendChild(td4);
     table.appendChild(tr);
+
+    if(i["status"]=="passed")
+        passCnt++;
 }
+
+var results = document.getElementById("results");
+var res = (passCnt==parsedData.length)?"Passed":"Failed"
+results.innerHTML= "Testcase : "+res;
+
+var stats = document.getElementById("stats");
+var fail = parsedData.length-passCnt;
+var total = parsedData.length
+//stats.innerHTML= "Total no. of testcase : "+total+"<br>No. of Passed Testcase : "+ passCnt + "<br>No. of Failed Testcase : " + fail+"<br><br>";
+
 }
 
 var modal = document.getElementById("myModal");
