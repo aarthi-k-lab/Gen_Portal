@@ -1,0 +1,11 @@
+{
+"test_case_name": "user_input",
+"did_no": "135498468343",
+"test_steps": {
+    "step1": {"description": "dhrsejd mtud", "prompt": "What do you want", "reply_with": "recharge", "reply_type": "speech"},
+    "step2": {"description": "dhrsejd mtud", "prompt": "in recharge section", "reply_with": "", "reply_type": "dtmf"},
+    "step3": {"description": "dhrsejd mtud", "prompt": "enter the amount", "reply_with": "120", "reply_type": "dtmf"},
+    "step4": {"description": "dhrsejd mtud", "prompt": "wait for recharge "reply_with": "", "reply_type": "dtmf"},
+    "step5": {"description": "dhrsejd mtud", "prompt": "recharged", "reply_with": "", "reply_type": "dtmf"}
+}
+}

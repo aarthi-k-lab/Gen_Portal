@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="stylesheet" href="/style/GenPortalStyle.css">
+    <link rel="stylesheet" type="text/css" href="/style/style.css" />   
+    <link rel="stylesheet" type="text/css" href="/style/GenPortalStyle.css">
     <title>Centralized QAART</title>
 </head>
 <body>
@@ -50,12 +50,12 @@
                 <div class="section">
                     <h4>Create new testcase</h4>
                     <form id="testcase" action="" method="POST">
-                        <label for="name">Name : </label>
+                        <label for="test_case_name">Name : </label>
                         <input type="text" id="test_case_name" name="test_case_name"><br><br>
                         <label for="path">Path : </label>
                         <input type="text" id="path">
                         <button type="button" onclick=""> Browse </button><br><br>
-                        <label for="DIDnum">DID Number : </label>
+                        <label for="did_no">DID Number : </label>
                         <input type="text" id="did_no" name="did_no"><br><br>
                         <label for="notes">Notes : </label>
                         <textarea id="notes" rows="2" style="margin: 0px; width: 371px; height: 53px;"></textarea>
@@ -74,17 +74,22 @@
                         </tr>
                     </table><br><br>
                     <hr><br>
-                    <button type="button" onclick=""> Save and Run</button>
+                    <button type="button" onclick="d()"> Save and Run</button>
                     <button type="button" onclick=""> Save and Exit</button>
                 </form>
                 </div>
             </div>
-
+            <div class="myModal" id="myModal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <table id="dyna-table"></table> 
+                </div>
+            </div>  
         </div>
-    </div>
+    </div> 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <script src="/js/GenPortalScript.js"/>    
-    
+     <script src="/js/GenPortalScript.js"/>    
+
 
 </body>
 </html>

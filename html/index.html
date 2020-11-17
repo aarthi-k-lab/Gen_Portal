@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" type="text/css" href="/style/style.css" />   
+    
     <title>Centralized QAART</title>
 </head>
 
@@ -13,7 +14,7 @@
         <img src="/images/icon-genesys.png" />
         <h1>Centralized QAART</h1>
         <div class="nav nav-sidebar">
-            <a href="index.html" class="active">Create Environment</a>
+            <a href="index.html" class="active">Create Environment</a> 
             <a href="GenesysPortal.html">Genesys Portal</a>
             <a href="RoutingUseCases.html">Test Routing</a>
         </div>
@@ -24,44 +25,45 @@
             <h2>Environment Creation</h2>
         </div>
         <div class="env_creation">
-            <form id="create_env" action="">
+            <form id="create_env">
                 <table>
                     <tr><td><label for="testAgents">No. of Test Agents to be used</label></td>
-                    <td>: <input type="text" id="testAgents"></td>
+                    <td>: <input type="text" id="testAgents" name="testAgents"></td>
                     <tr><td><label for="existEnv">No. of Existing Environment</label></td>
-                    <td>: <input type="text" id="existEnv"></td></tr>
+                    <td>: <input type="text" id="existEnv" name="existEnv"></td></tr>
                     <tr><td><label for="qaartEnv">No. of QAART Environment</label></td>
-                    <td>: <input type="text" id="qaartEnv"></td></tr>
+                    <td>: <input type="text" id="qaartEnv" name="qaartEnv"></td></tr>
                     <tr><td><label for="qaartEnv_Host">No. of QAART Environment per host</label></td>
-                    <td>: <input type="text" id="qaartEnv_Host"></td></tr>
+                    <td>: <input type="text" id="qaartEnv_Host" name="qaartEnv_Host"></td></tr>
                     <tr><td><label for="tenantReg">Tenant Region</label></td>
-                    <td>: <input type="text" id="tenantReg"></td></tr>
+                    <td>: <input type="text" id="tenantReg" name="tenantReg"></td></tr>
                     <tr><td><label for="tsrvContact">T server Contact</label></td>
-                    <td>: <input type="text" id="tsrvContact"></td></tr>
+                    <td>: <input type="text" id="tsrvContact" name="tsrvContact"></td></tr>
                     <tr><td><label for="tsrvPort">T server Port</label></td>
-                    <td>: <input type="text" id="tsrvPort"></td></tr>
+                    <td>: <input type="text" id="tsrvPort" name="tsrvPort"></td></tr>
                     <tr><td><label for="obj_Env">No. of Objects per Environment</label></td>
-                    <td>: <input type="text" id="obj_Env"></td></tr>
+                    <td>: <input type="text" id="obj_Env" name="obj_Env"></td></tr>
                 </table><br>
                 <hr>
                 <h4>Init File</h4>
                 <table>
                     <tr><td><label for="CSHost">CS Host</label></td>
-                    <td>: <input type="text" id="CSHost"></td></tr>
+                    <td>: <input type="text" id="CSHost" name="CSHost"></td></tr>
                     <tr><td><label for="CSPort">CS Port</label></td>
-                    <td>: <input type="text" id="CSPort"></td></tr>
+                    <td>: <input type="text" id="CSPort" id="CSPort"></td></tr>
                     <tr><td><label for="CSApplication">CS Application</label></td>
-                    <td>: <input type="text" id="CSApplication"></td></tr>
+                    <td>: <input type="text" id="CSApplication" name="CSApplication"></td></tr>
                     <tr><td><label for="CSPassword">CS Password</label></td>
-                    <td>: <input type="text" id="CSPassword"></td></tr>
+                    <td>: <input type="text" id="CSPassword" name="CSPassword"></td></tr>
                     <tr><td><label for="CSUsername">CS Username</label></td>
-                    <td>: <input type="text" id="CSUsername"></td></tr>
+                    <td>: <input type="text" id="CSUsername" name="CSUsername"></td></tr>
                     <tr><td><label for="configsrv">Config Server Name</label></td>
-                    <td>: <input type="text" id="configsrv"></td></tr>
+                    <td>: <input type="text" id="configsrv" name="configsrv"></td></tr>
                 </table><br><br>
                 <input type="submit" value="Submit">
             </form>
         </div>
     </div>
+    
 </body>
 </html>

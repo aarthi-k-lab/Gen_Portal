@@ -73,9 +73,88 @@ function deleteCrntRow(id)
 
 }
 
+
 $(function() {
     $('#create_testcase').click(function() {
         $('#sb-right').show();
         return false;
     });        
 });
+
+// var request=new XMLHttpRequest();
+// request.open("GET","https://restcountries.eu/rest/v2/all",true);
+// request.send();
+// var str="";
+// request.onload=function()
+// {
+//     var data=JSON.parse(this.response);
+//     for(var item of data)
+//     {
+//         str+=item["name"]+":"+item["flag"]+"\n";
+//     }
+//     var ele = document.getElementById("flags");
+//     ele.textContent=str;
+// }
+function d(){
+modal.style.display = "block";
+var data=[{"expected text": "hello welcome to genesys", "transcribed text ": "hello welcome to genesis", "confidence": 0.9476495726495727, "status": "passed"},{"expected text": "Thanks for your input ", "transcribed text ": "thanks for your input", "confidence": 0.9285714285714285, "status": "passed"},{"expected text": "we will get back", "transcribed text ": "we will get back", "confidence": 0.9629629629629629, "status": "passed"}];  
+var parsedData=JSON.parse(JSON.stringify(data));
+var headings=["Expected Text", "Transcribed Text", "Confidence", "Status"];
+console.log(parsedData);
+var table=document.getElementById("dyna-table");
+var tr=document.createElement("tr");
+for(let i=0;i<headings.length;i++)
+{
+    var th=document.createElement("th");
+    th.innerHTML=headings[i];
+    tr.appendChild(th);    
+}
+table.appendChild(tr);
+for(let i of parsedData)
+{
+    tr=document.createElement("tr");
+    var td1=document.createElement("td");
+    td1.innerText=i["expected text"];
+    tr.appendChild(td1);
+    var td2=document.createElement("td");
+    td2.innerText=i["transcribed text "];
+    tr.appendChild(td2);
+    var td3=document.createElement("td");
+    td3.innerText=i["confidence"];
+    tr.appendChild(td3);
+    var td4=document.createElement("td");
+    td4.innerText=i["status"];
+    tr.appendChild(td4);
+    table.appendChild(tr);
+}
+}
+
+var modal = document.getElementById("myModal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+  var table=document.getElementById("dyna-table");
+  var rowCount = table.rows.length;
+  
+    for (var i = rowCount; i >0; i--) {
+    table.deleteRow(0);
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    var table=document.getElementById("dyna-table");
+    var rowCount = table.rows.length;
+    for (var i = rowCount; i >0; i--) {
+        table.deleteRow(0);
+    }
+  }
+}
