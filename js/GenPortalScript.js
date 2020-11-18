@@ -99,7 +99,7 @@ function d(){
 modal.style.display = "block";
 var data=[{"expected text": "'hello welcome to genesys'", "transcribed text ": "hello welcome to genesis", "confidence": 0.9476495726495727, "status": "passed"},{"expected text": "Thanks for your input ", "transcribed text ": "thanks for your input", "confidence": 0.9285714285714285, "status": "passed"},{"expected text": "we will get back", "transcribed text ": "we will get back", "confidence": 0.9629629629629629, "status": "passed"}];  
 var parsedData=JSON.parse(JSON.stringify(data));
-var headings=["Expected Text", "Transcribed Text", "Confidence", "Status"];
+var headings=["Step","Expected Text", "Transcribed Text", "Confidence", "Status"];
 console.log(parsedData);
 var table=document.getElementById("dyna-table");
 var tr=document.createElement("tr");
@@ -114,6 +114,9 @@ let passCnt=0;
 for(let i of parsedData)
 {
     tr=document.createElement("tr");
+    var td=document.createElement("td");
+    td.innerText=table.rows.length;
+    tr.appendChild(td);
     var td1=document.createElement("td");
     td1.innerText=i["expected text"];
     tr.appendChild(td1);
@@ -171,4 +174,9 @@ window.onclick = function(event) {
         table.deleteRow(0);
     }
   }
+}
+
+function funcreset(){
+    document.getElementById("testcase").reset();
+    $('#sb-right').hide();
 }
