@@ -75,3 +75,26 @@ padding-top: 8px;
 width: 200px;
 }
 
+#routing_form ul{
+  list-style: none;
+}
+
+#routing_form li{
+  padding:10px;
+}
+
+#routing_form
+{
+  font-size:14px;
+}
+
+#routing_form .desc
+{
+  display:block;
+  
+}
+
+.newport
+{
+  width:50px;
+}

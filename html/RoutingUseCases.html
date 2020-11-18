@@ -19,7 +19,118 @@
       </div>
       
       <div class="main">
-          
+        <div class="header">
+            <h2>Routing Use Cases</h2>
+        </div>
+        <div class="routing_usecase_form">
+            <form id="routing_form">
+                <ul>
+                    <li>
+                        <label class="desc" for="cshost">Coniguration Server</label>
+                        <span>                            
+                            <label for="cshost">Hostname</label>
+                            <input name="cshost" type="text" class="hostname" value="">
+                        </span>
+                        <span>                            
+                            <label for="csport">Port</label>
+                            <input name="csport" type="text" class="newport" value="">
+                        </span>
+                    </li>
+                    <li>
+                        <label class="desc" for="orshost">ORS Server</label>
+                        <span>
+                            <label for="orshost">Hostname</label>
+                            <input name="orshost" type="text" class="hostname" value="">                            
+                        </span>
+                        <span>
+                            <label for="orsport">Port</label>
+                            <input name="orsport" type="text" class="newport" value="">                            
+                        </span>
+                    </li>
+                    <li>
+                        <label class="desc" for="epihost">Epiphone</label>
+                        <span>
+                            <label for="epihost">Hostname</label>
+                            <input name="epihost" type="text" class="hostname" value="">                            
+                        </span>
+                        <span>
+                            <label for="epiport">Port</label>
+                            <input name="epiport" type="text" class="newport" value="">                            
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <label for="tenantname" class="desc">Tenant Name</label>
+                            <input name="tenantname" type="text" class="tenantname" value="">
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <label for="dns" class="desc">DNS</label>
+                            <input name="dns" type="text" class="dns" value="">
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <label for="cdn" class="desc">CDN</label>
+                            <input name="cdn" type="text" class="cdn" value="">
+                        </span>
+                    </li>
+                    <hr>
+                    <li>
+                        <span>
+                            <label name="agents" class="desc"><b>Agents</b></label>
+                            <ol>
+                                <li>
+                                    <label class="desc" for="ext_sip_host">External SIP</label>
+                                    <span>
+                                        <label for="ext_sip_host">Hostname</label>
+                                        <input name="ext_sip_host" type="text" class="ext_sip_host" value="">                                        
+                                    </span>
+                                    <span>
+                                        <label for="ext_sip_port">Port</label>
+                                        <input name="ext_sip_port" type="text" class="newport" value="">                                        
+                                    </span>
+                                </li>
+                                <li>
+                                    <label class="desc" for="sipproxy">SIP Proxy Server</label>
+                                    <span>
+                                        <label for="sipproxy">Hostname</label>
+                                        <input name="sipproxy" type="text" class="sipproxy" value="">                                        
+                                    </span>
+                                    <span>
+                                        <label for="sipport">Port</label>
+                                        <input name="sipport" type="text" class="newport" value="">                                        
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <label for="dn" class="desc">DN</label>
+                                        <input name="dn" type="text" class="dn" value="">
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <label for="ext_sip" class="desc">External Sip</label>
+                                        <input name="ext_sip" type="text" class="ext_sip" value="">
+                                    </span>
+                                </li>
+                            </ol>
+                        </span>
+                    </li>
+                    <hr>
+                    <li>
+                        <span>
+                            <label for="test_suite" class="desc"><b>Test Suite Files</b></label>
+                            <input name="test_suite" type="file" class="test_suite" value="" multiple>
+                        </span>
+                    </li>
+                    <li>
+                        <input type="submit" value="submit">
+                    </li>
+                </ul>
+            </form>
+        </div>
       </div>
 </body>
 </html>
